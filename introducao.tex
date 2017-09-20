@@ -1,0 +1,145 @@
+% Introdução
+
+\chapter{Introdução}
+
+\section{Contextualização}
+
+A locadora Ronbuster, fundada em 1972, 
+possui 4 filiais na grande florianópolis e, 
+preocupada com o crescimento dos meios digitais 
+de transmissão de filmes, decidiu implantar uma 
+data mart para analisar o histórico de vendas, 
+buscando novas estratégias para continuar 
+crescendo no mercado.
+
+O público da locadora é composto em sua maioria, 
+por pessoas acima de 40 anos. Seu acervo é 
+composto, em grande parte, por DVD’s e Blu-Rays. 
+Também possui em acervo VHS, e outras mídias, 
+mas em pequena quantidade.
+
+As categorias de preço variam em função da data 
+de chegada da mídia na locadora. Ao chegar na 
+locadora, uma mídia é classificada como 
+lançamento, e o empréstimo deve ser retornado 
+em até 24 horas, por um preço de 8 reais. 
+Depois de 60 dias do lançamento, a categoria 
+da mídia muda para “vermelha”, e sua devolução 
+pode ser feita em até 72 horas após o empréstimo, 
+pelo valor de 6 reais. Passados 120 dias na 
+categoria vermelha, a mídia passa para a 
+categoria “verde” e o seu empréstimo pode ser 
+devolvido em até 96 horas, com valor de 4 reais.
+ 
+\section{Perguntas estratégicas}
+
+As perguntas estratégias levantadas para o 
+desenvolvimento do Data Mart são as seguintes:
+
+\begin{enumerate}
+    \item Em quanto tempo uma mídia física se paga?
+    \item Qual é o fluxo de empréstimos e devoluções das mídias por dia da semana?    
+    \begin{enumerate}
+    \item Responde quais dias tem mais devolução e mais empréstimos.
+    \end{enumerate}
+    \item Qual o número ideal de cópias de cada título por filial?
+    \end{enumerate}
+  
+
+
+\section{Escopo}
+
+O escopo do projeto consiste em planejar e 
+desenvolver um Data Mart para a locadora Ronbuster 
+e suas filiais. De forma específica, para o 
+desenvolvimento do mercado e a geração de receita.  
+O número máximo de usuários suportados pelo sistema, 
+para realizar a análise dos resultados gerados pelo 
+\textit{Data Mart} é de 10 pessoas. 
+
+
+\section{Justificativa}
+
+A gestão da informação, quando feita de forma correta, pode trazer inúmeros benefícios para as organizações. Com a implantação do Data Mart na locadora Ronbuster, se busca aumentar o lucro sobre as locações de mídias do acervo, gerando um maior fluxo de caixa para empresa. Além do mais, numa sociedade que cresce em competitividade a cada dia, um data mart pode ser um diferencial no mercado para responder rapidamente às demandas e tendências do mercado.
+
+Para estimar o retorno do projeto, em um período anual, 
+foi utilizado a técnica simples do 
+\textit{Payback Period Analysis}, onde foi feita uma 
+estimativa do retorno estimado ao ano de 
+impacto nas vendas, e diluído o valor do 
+projeto em parcelas deste retorno anual, 
+conforme é mostrado na Tabela \ref{tab:justificativa}.
+
+\begin{table}[!htb]
+    \begin{center}
+        \caption{\textit{Payback Period Analysis}.} \label{tab:justificativa}
+        \begin{tabular}{ p{6cm} | p{3cm} }
+            \hline
+            \textbf{Custo estimado do projeto do Ronbuster \textit{Data Mart}} & R\$ 52.000,00 \\
+            \hline
+            \textbf{Custo do retorno anual} & R\$ 37.000,00 \\
+            \hline
+            \textbf{\textit{Payback Period Analysis}} & 1,4 anos \\
+            \hline
+        \end{tabular}
+    \end{center}
+    Fonte: Os autores (2017).
+\end{table}
+
+Como visto na tabela acima, com a implantação do data mart 
+na rede de locadoras Ronbuster foi calculado uma receita 
+a mais de R\$13.500,00 para a empresa a cada ano. 
+Isso é, após 2,6 anos, que é o período de 
+Payback, a empresa lucrará 13,45\% a mais, 
+anualmente, pelo uso da ferramenta, considerando o 
+levantamento de R\$ 275.000,00 aproximadamente de 
+receita das filiais da locadora juntas, anualmente.
+
+Além do próprio projeto se pagar num tempo aceitável, 
+o valor das informações sobre o negócio, mesmo que 
+não mensurados e usados no cálculo, devem ser levados 
+em conta. Sendo assim, o projeto de instalação do 
+data mart se torna viável e traz um bom retorno 
+em médio prazo para a empresa.
+
+\section{Fatores críticos de sucesso}
+
+Os fatores críticos de sucesso, inicialmente 
+levantados, são os seguintes:
+
+\begin{itemize}
+    \item Prover uma fonte única de informações sobre os processos de negócio da vídeo locadora.
+    \item Aumentar a eficácia das locações, em 25\% ,  nos períodos de promoções.
+\end{itemize}
+
+\section{Exclusões de escopo}
+
+Nesta etapa de desenvolvimento não será feita uma integração de dados com sistemas de terceiros.  Além disso, na primeira versão do projeto não vai ser disponibilizado ferramentas para descoberta de dados utilizando data mining.
+
+
+\section{Riscos}
+
+Os possíveis riscos levantados e seu plano de resposta e mitigação são
+apresentados na Tabela \ref{tab:riscos}. 
+
+\begin{table}[!htb]
+    \begin{center}
+        \caption{Riscos.} \label{tab:riscos}
+        \begin{tabular}{ p{1.7cm} | p{2cm} | p{1.1cm} | p{2cm} | p{2cm} }
+            \hline
+            \textbf{Risco} &\textbf{Probabilidade} &\textbf{Impacto} & \textbf{Estratégia de resposta} & \textbf{Estratégia de mitigação} \\
+            \hline
+            Alteração do
+            escopo
+             &  Alta  &  Alto  &  Redefinição
+             do tempo
+               & Validação dos requisitos iniciais  \\
+            \hline
+            Dificuldade técnica &  Média  &  Alto  &  Contratação de especialista  &  Capacitação técnica para a equipe  \\
+            \hline
+        \end{tabular}
+    \end{center}
+    Fonte: Os autores (2017).
+\end{table}
+ 
+

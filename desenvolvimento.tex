@@ -1,0 +1,146 @@
+% Desenvolvimento
+
+\chapter{Planejamento}
+
+\section{Definição da equipe}
+
+Os recursos humanos e seus respectivos papéis 
+envolvidos no projeto são definidos na Tabela \ref{tab:recursos} . 
+
+\begin{table}[!htb]
+    \begin{center}
+        \caption{Recursos Humanos.} \label{tab:recursos}
+        \begin{tabular}{ p{4cm} | p{4cm} }
+            \hline
+            \textbf{Papel} & \textbf{Recurso Humano} \\
+            \hline
+            Diretor de DW & Ronan Romeu Knob \\
+            \hline
+            Gerente de projetos de DW & Sabrina Schütz de Oliveira
+             \\
+            \hline
+            Analista de negócios & Giancarlo Souza de Freitas \\
+            \hline
+            Arquiteto de DW & Giancarlo Souza de Freitas \\
+            \hline
+            Equipe técnica & Valdir Luiz Hofer Arnhold \\
+            \hline
+        \end{tabular}
+    \end{center}
+    Fonte: Os autores (2017).
+\end{table}
+ 
+\section{Cronograma}
+
+O projeto de \textit{Data Mart} Ronbuster 
+foi pensado para ter início no mês 
+de março. Sua duração estimada foi 
+estipulada em 6 meses, contemplando as 
+fases apresentadas no tabela x. 
+A escolha deste período de início foi 
+devido a que é o período de término das 
+férias escolares, o que deve baixar o movimento 
+das filiais, estando pronto também antes do final 
+do ano, novo grande ciclo de férias.
+
+Sendo assim, as datas iniciais de início e término do projeto são:
+
+\begin{itemize}
+    \item Início do projeto - 01/03/2017;    
+    \item Término do projeto - 31/08/2017;    
+    \item Dias úteis neste período: 129; e
+    \item Horas do projeto: 1032h
+\end{itemize}
+
+Abaixo temos uma estimativa das fases do projeto, e seu tempo esperado.
+Os valores apresentados não consideram feriados e sábados e domingos. Cálculo da hora é feito por dias úteis * 8h.
+
+\begin{table}[!htb]
+    \begin{center}
+        \caption{Estimativa de tempo.} \label{tab:tempo}
+        \begin{tabular}{ p{3cm} |  p{2.2cm} | p{2.3cm} | p{1.2cm} }
+            \hline
+            \textbf{Fase} & \textbf{Data de início}  & \textbf{Data de término} & \textbf{Duração} \\
+            \hline
+            Planejamento do projeto & 01/03/20177 & 24/03/2017 & 144 h \\
+            \hline
+            Entrevistas &
+            27/03/2017 &
+            07/04/2017 &
+            80 h \\
+            \hline
+            Definição do esquema estrela e plano de ação &
+            10/04/2017 &
+            20/04/2017 &
+            64 h \\
+            \hline        
+            Definição da equipe do DW &
+            24/04/2017 &
+            26/04/2017 &
+            24 h \\
+            \hline 
+            Implementação do DW &
+            27/04/2017 &
+            09/06/2017 &
+            248 h \\
+            \hline            
+            Criação de portal de dashboards e relatórios &
+            12/06/2017 &
+            04/08/2017 &
+            320 h \\
+            \hline 
+            Treinamento &
+            07/08/2017 &
+            11/08/2017 &
+            40 h \\
+            \hline
+            Homologação e ajustes pontuais &
+            14/08/2017 &
+            31/08/2017 &
+            112 h \\
+            \hline
+            \multicolumn{3}{r|}{Total} & 1032 h \\
+            \hline
+
+        \end{tabular}
+    \end{center}
+    Fonte: Os autores (2017).
+\end{table}
+
+
+\section{Custos}
+
+Com base no Cronograma mostrado e nas horas estimadas o custo projeto é de R\$ 52.000,00.
+
+\chapter{MODELAGEM DIMENSIONAL}
+
+Para a construção do modelo dimensional, 4 passos são necessários, sendo eles:
+
+\begin{enumerate}
+\item Decisão de qual processo de negócio deve-se modelar, com base na combinação do conhecimento do negócio com o conhecimento dos dados disponíveis.
+\item Definição do grão do processo do negócio, o qual é o nível fundamental atômico de dados que representará o processo na tabela de fatos.
+\item Escolha das dimensões que serão aplicadas a cada registro da tabela de fatos.
+\item Escolha dos fatos mensuráveis que irão popular cada registro da tabela de fatos.
+\end{enumerate}
+
+A seguir, temos a utilização desses passos para a criação da modelagem dimensional em questão, para auxiliar a resolução das perguntas estratégicas levantadas.
+ 
+\section{processo do negócio}
+
+O processo do negócio que será modelado é o movimento diário de item, nos permitindo acompanhar quais filmes estão sendo emprestados, em que lojas, a que preço e em que dias.
+
+
+\section{granularidade}
+
+A granularidade, representa o nível de
+detalhamento da modelagem.
+Para este projeto, se buscou alcançar o maior nível de granularidade possível. Por exemplo, para o 
+mapeamento da dimensão do tempo é utilizado a hora, 
+dessa forma se torna possível fazer 
+consultas por dia ou semanas. 
+
+\section{dimensões}
+
+As dimensões escolhidas são Tempo, Midia, Loja e Cliente.  
+
+\section{fatos}
